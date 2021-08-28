@@ -7,11 +7,8 @@ void fun (int n){
         fun(n-1);
     }
 }
-
 int main (){
-    
     int a =3;
     fun(a);
-
     return 0;
 }
