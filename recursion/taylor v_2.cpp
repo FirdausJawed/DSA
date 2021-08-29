@@ -2,13 +2,14 @@
 using namespace std;
 
 double e (int x, int n){
-    static double s = 1;
-    if (n==0){
-      return s;
-    }else{
-    s=1+(x*s)/n;
-    return e (x,n-1);
-    }  
+    double s = 1, num=1, den=1;
+   
+  for( int i=1;i<=n; i++){
+    num *= x;
+    den *= i;
+    s+=num/den;
+  } 
+  return s;
 }
 
 int main (){
