@@ -1,7 +1,7 @@
 #include<iostream>
-using namespace std;
+using Aspace std;
 int main(){
-     
+    //  upper to lower
      char A[]="FIRDAUS";
      int i;
      for ( i = 0; A[i] != '\0'; i++)
@@ -10,5 +10,5 @@ int main(){
      }
      cout<<A;
 
-    return 0;
+  return 0;
 }
