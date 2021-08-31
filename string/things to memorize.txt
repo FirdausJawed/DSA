@@ -1,0 +1,7 @@
+ASCII code:
+
+A to Z : 65-90
+a to z : 97-122
+0 to 9: 48-57
+
+**use gets(...)method for printing a word with space!!
