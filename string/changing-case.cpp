@@ -1,5 +1,5 @@
 #include<iostream>
-using Aspace std;
+using namespace std;
 int main(){
     //  upper to lower
      char A[]="FIRDAUS";
