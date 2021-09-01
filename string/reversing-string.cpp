@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-     char x[]="Firdaus";
+     char x[]="mota bhai";
      char a[7];
      char t;
      int i,j;
@@ -24,17 +24,17 @@ int main()
    
 //    method 2
    
-   for ( i = 0; x[i] != '\0'; i++)
-   {
+  //  for ( i = 0; x[i] != '\0'; i++)
+  //  {
        
-   }
-   i=i-1;
-   for (j = 0; i >=0; i--,j++)
-   {
-       a[j] = x[i];
-   }
+  //  }
+  //  i=i-1;
+  //  for (j = 0; i >=0; i--,j++)
+  //  {
+  //      a[j] = x[i];
+  //  }
    
-   cout<<a<<endl;
+  //  cout<<a<<endl;
 
     return 0;
 }
