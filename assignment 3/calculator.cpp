@@ -7,16 +7,16 @@ int main (){
    cin>>a>>b;
     
    int add = (a+b);
-   cout<<add; 
+   cout<<add<<endl; 
   
    int substract = (a-b);
-   cout<<substract; 
+   cout<<substract<<endl; 
 
    int multiply = (a*b);
-   cout<<multiply; 
+   cout<<multiply<<endl; 
 
-   int division = (a/b);
-   cout<<division; 
+   float division = (a/b);
+   cout<<division<<endl; 
    
     return 0;
 }
