@@ -5,3 +5,5 @@ a to z : 97-122
 0 to 9: 48-57
 
 **use gets(...)method for printing a word with space!!
+
+Anagrams: Anagrams are two set of strings which are made up of same set of alphabet.
