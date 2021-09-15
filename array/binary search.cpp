@@ -4,6 +4,8 @@ int main (){
 
   int n,arr[n],i,key,l,h,mid;
   mid=(l+h)/2;
+  l=0;
+  h=n-1;
   cout<<"enter the length of the array: ";
   cin>>n;
   cout<<"enter the elements of the array: ";
@@ -14,8 +16,7 @@ int main (){
   cout<<"enter the key element: ";
   cin>>key;
   
- l=arr[0];
- h=arr[n];
+
  while (l<=h)
  {
     if (mid==key)
