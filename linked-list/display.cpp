@@ -41,10 +41,20 @@ void Rdisplay (struct node *p){
     }
 }
 
+int count (struct node *p){
+    int l = 0;
+    while (p){
+        l++;
+        p=p->next;
+    }
+    return 1;
+}
+
 int main (){
     struct node *temp;
     int A[] = {2,4,3,8,5,9,10};
-    create (A,8);
-    display (first);
+    create (A,9);
+    // display (first);
+    cout<<"length is "<<count(first);
     return 0;
 }
