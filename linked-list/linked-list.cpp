@@ -50,10 +50,21 @@ int count (struct node *p){
     return 1;
 }
 
+int Rcount (struct node *p){
+    if (p != NULL)
+    {
+       return Rcount(p ->next)+1;
+    }
+    else{
+        return 0;
+    }
+    
+}
+
 int main (){
     struct node *temp;
     int A[] = {2,4,3,8,5,9,10};
-    create (A,9);
+    create (A,7);
     // display (first);
     cout<<"length is "<<count(first);
     return 0;
