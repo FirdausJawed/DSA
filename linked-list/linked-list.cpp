@@ -110,17 +110,17 @@ int Max (struct node *p){
 // }
 
 
-// node *Search (node *p,int key){
-//     while (p != NULL)
-//     {
-//         if (key == p->data)
-//         {
-//            return p;
-//         }
-//         p = p->next;
-//     }
-//     return NULL;
-// }
+struct node *Search (struct node *p,int key){
+    while (p != NULL)
+    {
+        if (key == p->data)
+        {
+           return p;
+        }
+        p = p->next;
+    }
+    return NULL;
+}
 
 int main (){
     struct node *temp;
@@ -129,7 +129,15 @@ int main (){
     // display (first);
     // cout<<"length is "<<count(first);
     // cout << "sum is "<<sum(first);
-    cout << "max is "<<Max(first);
-      cout << "key is "<<Search(first);
+    // cout << "max is "<<Max(first);
+
+    temp=Search(first,1);
+    if (temp)
+    {
+        cout<<"key is found "<<temp->data;
+    }else{
+        cout<<"not found";
+    }
+    
     return 0;
 }
