@@ -139,7 +139,7 @@ struct node * Rsearch (struct node *p, int key){
 // improving linear search
 
 struct node *search (struct node *p,int key){
-    struct node *q;
+    struct node *q=NULL;
     while (p != NULL)
     {
         if (key == p->data)
