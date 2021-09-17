@@ -61,11 +61,21 @@ int Rcount (struct node *p){
     
 }
 
+int sum (struct node *p){
+    int s=0;
+    while (p != NULL){
+        s+=p->data;
+        p=p->next;
+    }
+    return s;
+}
+
 int main (){
     struct node *temp;
-    int A[] = {2,4,3,8,5,9,10};
-    create (A,7);
+    int A[] = {2,9,4,3,8,5,9,10};
+    create (A,8);
     // display (first);
-    cout<<"length is "<<count(first);
+    // cout<<"length is "<<count(first);
+    cout << "sum is "<<sum(first);
     return 0;
 }
