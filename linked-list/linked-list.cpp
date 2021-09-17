@@ -135,6 +135,27 @@ struct node * Rsearch (struct node *p, int key){
     return Rsearch (p->next,key); 
 }
 
+
+// improving linear search
+
+struct node *search (struct node *p,int key){
+    struct node *q;
+    while (p != NULL)
+    {
+        if (key == p->data)
+        {
+           q -> next = p->next;
+           p->next=first;
+           first=p;
+           return p;
+        }
+        q=p;
+        p = p->next;
+    }
+    return NULL;
+}
+
+
 int main (){
     struct node *temp;
     int A[] = {2,9,4,3,8,5,9,20};
@@ -144,13 +165,13 @@ int main (){
     // cout << "sum is "<<sum(first);
     // cout << "max is "<<Max(first);
 
-    temp=Rsearch(first,2);
+    temp=search(first,2);
     if (temp)
     {
         cout<<"key is found "<<temp->data;
     }else{
         cout<<"not found";
     }
-    
+    display(first);
     return 0;
 }
