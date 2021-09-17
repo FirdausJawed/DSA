@@ -79,12 +79,44 @@ int Rsum (struct node *p){
     }
 }
 
+
+int Max (struct node *p){
+    int max = INT32_MIN;
+    while (p)
+    {
+       if (p->data>max)
+       {
+          max=p->data; 
+       }
+       p=p->next;
+    }
+    return max; 
+}
+
+// int RMax (struct node *p) {
+//   int x = 0;
+//   if (p==0)
+//   {
+//      return INT32_MIN;
+//   }
+//   x=RMax(p->next);
+//   if (x>p->next)
+//  {
+//     return x;
+//  }
+//  else {
+//     return p-> data;
+//  }
+// }
+
+
 int main (){
     struct node *temp;
-    int A[] = {2,9,4,3,8,5,9,10};
+    int A[] = {2,9,4,3,8,5,9,20};
     create (A,8);
     // display (first);
     // cout<<"length is "<<count(first);
-    cout << "sum is "<<sum(first);
+    // cout << "sum is "<<sum(first);
+    cout << "max is "<<Max(first);
     return 0;
 }
