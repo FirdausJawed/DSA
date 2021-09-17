@@ -122,6 +122,19 @@ struct node *Search (struct node *p,int key){
     return NULL;
 }
 
+
+struct node * Rsearch (struct node *p, int key){
+    if (p==NULL)
+    {
+        return NULL;
+    }
+    if (key == p->data)
+    {
+      return p;
+    }
+    return Rsearch (p->next,key); 
+}
+
 int main (){
     struct node *temp;
     int A[] = {2,9,4,3,8,5,9,20};
@@ -131,7 +144,7 @@ int main (){
     // cout << "sum is "<<sum(first);
     // cout << "max is "<<Max(first);
 
-    temp=Search(first,1);
+    temp=Rsearch(first,2);
     if (temp)
     {
         cout<<"key is found "<<temp->data;
