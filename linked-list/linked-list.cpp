@@ -70,6 +70,15 @@ int sum (struct node *p){
     return s;
 }
 
+int Rsum (struct node *p){
+    if(p=NULL){
+        return 0;
+    }
+    else {
+        return Rsum(p->next)+p->data;
+    }
+}
+
 int main (){
     struct node *temp;
     int A[] = {2,9,4,3,8,5,9,10};
