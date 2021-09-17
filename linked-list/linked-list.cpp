@@ -110,6 +110,18 @@ int Max (struct node *p){
 // }
 
 
+// node *Search (node *p,int key){
+//     while (p != NULL)
+//     {
+//         if (key == p->data)
+//         {
+//            return p;
+//         }
+//         p = p->next;
+//     }
+//     return NULL;
+// }
+
 int main (){
     struct node *temp;
     int A[] = {2,9,4,3,8,5,9,20};
@@ -118,5 +130,6 @@ int main (){
     // cout<<"length is "<<count(first);
     // cout << "sum is "<<sum(first);
     cout << "max is "<<Max(first);
+      cout << "key is "<<Search(first);
     return 0;
 }
