@@ -9,6 +9,14 @@ struct Array
  int length;
 };
 
+void Display(struct Array arr)
+ {
+ int i;
+ printf("\nElements are\n");
+ for(i=0;i<arr.length;i++)
+ printf("%d ",arr.A[i]);
+ }
+
 
 int Min (struct Array arr){
     int min=arr.A[0];
@@ -27,6 +35,6 @@ int Min (struct Array arr){
 int main (){
 
   struct Array arr ={{1,2,3,4,5},6,9};
-
+Display(arr);
     return 0;
 }
