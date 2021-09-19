@@ -1,27 +1,18 @@
 #include<iostream>
 using namespace std;
 
-
-struct Array
-{
- int A[10];
- int size;
- int length;
-};
-
-
-int Max (struct Array arr){
-    int max=arr.A[0];
+int Min (struct Array arr){
+    int min=arr.A[0];
     int i;
     for ( i = 0; i < arr.length; i++)
     {
-        if (arr.A[i]>max)
+        if (arr.A[i]<min)
         {
-           max=arr.A[i];
+           min=arr.A[i];
         }
         
     }
-    return max;
+    return min;
 }
 
 int main (){
