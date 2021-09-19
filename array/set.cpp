@@ -9,7 +9,14 @@ struct Array
  int length;
 };
 
-
+void Display(struct Array arr)
+ {
+ int i;
+ printf("\nElements are\n");
+ for(i=0;i<arr.length;i++)
+ printf("%d ",arr.A[i]);
+ }
+ 
 void Set (struct Array *arr, int index,int x){
   if (index>=0 && index<arr->length)
   {

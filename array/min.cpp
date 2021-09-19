@@ -1,6 +1,15 @@
 #include<iostream>
 using namespace std;
 
+
+struct Array
+{
+ int A[10];
+ int size;
+ int length;
+};
+
+
 int Min (struct Array arr){
     int min=arr.A[0];
     int i;

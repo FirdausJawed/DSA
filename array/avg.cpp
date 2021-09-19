@@ -1,6 +1,14 @@
 #include<iostream>
 using namespace std;
 
+struct Array
+{
+ int A[10];
+ int size;
+ int length;
+};
+
+
 int Sum (struct Array arr){
     int s=0;
     int i;
