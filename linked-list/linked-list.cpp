@@ -160,10 +160,6 @@ int main (){
     struct node *temp;
     int A[] = {2,9,4,3,8,5,9,20};
     create (A,8);
-    // display (first);
-    // cout<<"length is "<<count(first);
-    // cout << "sum is "<<sum(first);
-    // cout << "max is "<<Max(first);
 
     temp=search(first,2);
     if (temp)
