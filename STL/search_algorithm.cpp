@@ -3,30 +3,22 @@
 using namespace std;
 int main (){
 
-    int n;
-    cin>>n;
-    int arr[n];
+    int arr [] = {1,2,3,7,99,110};
+    int n = sizeof(arr)/sizeof(int);
 
-    for (int i = 0; i < n; i++)
-    {
-        cin>>arr[n];
-    }
-    
+    //main concept
     int key;
     cin>>key;
 
-    //main concept
-
     auto it = find(arr, arr+n,key);
     int index = it - arr;
-    cout<<index;
      if (index == n)
      {
-        cout<<"not present";
+        cout<<key<<" not present";
      }
      
      else{
-         cout<<"present";
+         cout<<"present at index "<<index;
      }
 
     return 0;
