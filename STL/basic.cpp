@@ -8,8 +8,7 @@ int search (T A[],int n,T key){
         if (A[i]==key)
         {
             return i;
-        }
-        
+        }        
     }
     return -1;
 }
