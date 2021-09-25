@@ -36,11 +36,18 @@ int main (){
     //to find the index______________
 
     string s = "I want to have some chocolate and milk shake!!";
-    
-    int index = s.find('milk');
+    string x;
+    cin>>x;
+    int index = s.find(x);
     cout<<index<<endl;
 
     //removing a word
+    string word;
+    cin>>word;
+    int len=word.length();
+    s.erase(index,len);
+    cout<<s<<endl;
+
 
     return 0;
 }
