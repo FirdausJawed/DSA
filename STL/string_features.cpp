@@ -33,7 +33,7 @@ int main (){
     
     cout<<s1[0]<<endl;
 
-    //to find the index______________
+    to find the index______________
 
     string s = "I want to have some chocolate and milk shake!!";
     string x;
@@ -48,6 +48,23 @@ int main (){
     s.erase(index,len);
     cout<<s<<endl;
 
+    //iterating each letter of string
+    for (int i = 0; i < s1.length(); i++)
+    {
+        cout<<s1[i]<<":"<<endl;
+    }
+    
+    //iterators
+
+    for (auto i = s1.begin(); i != s1.end(); i++)
+    {
+       cout<<(*i)<<endl;
+    }
+    
+    //for each loop
+    for(char c:s1){
+        cout<<c<<".";
+    }
 
     return 0;
 }
