@@ -22,6 +22,13 @@ int main (){
     cin>>a>>b;
     pair<int,int>p4 = make_pair(a,b);
     cout<<p4.first<<"  "<<p4.second<<endl;
+
+    //pair of pair
+    pair<pair<int,int>,string>car;
+    car.second="favourite car";
+    car.first.first=10;
+    car.first.second=20;
+    cout<<car.first.first<<"  "<<car.first.second<<"  "<<car.second<<endl;
        
     return 0;
 }
