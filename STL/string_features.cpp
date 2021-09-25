@@ -24,5 +24,23 @@ int main (){
     s0.clear();
     cout<<s0.length()<<endl;
 
+    //compare
+
+    string s1="Mango";
+    string s2 = "Apple";
+    
+    cout<<s2.compare(s1)<<endl;
+    
+    cout<<s1[0]<<endl;
+
+    //to find the index______________
+
+    string s = "I want to have some chocolate and milk shake!!";
+    
+    int index = s.find('milk');
+    cout<<index<<endl;
+
+    //removing a word
+
     return 0;
 }
