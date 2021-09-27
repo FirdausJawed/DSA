@@ -14,10 +14,14 @@ int main (){
        v.push_back(no);
     }
     
-
     for(int x:v){
         cout<<x<<" ";
     }
+     cout<<endl;
+
+    cout<<v.size()<<endl;
+    cout<<v.capacity()<<endl;
+    cout<<v.max_size()<<endl;
 
     return 0;
 }
