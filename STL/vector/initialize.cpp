@@ -1,5 +1,5 @@
 #include<iostream>
-#include<vector>
+#include<vector> 
 using namespace std;
 int main (){
     vector<int>a;
@@ -10,4 +10,5 @@ int main (){
     for(int x:b){
         cout<<x<<" , ";
     }
+    return 0;
 }
