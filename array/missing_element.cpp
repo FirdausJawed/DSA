@@ -11,7 +11,7 @@ int main (){
      sum=sum+arr[i];
    }
 
-   int s = (n*(n+1))/2;
+   int s = ((n+2)*(n+1))/2;
    
    int x=s-sum;
 
