@@ -26,14 +26,14 @@ int main (){
 
     //compare
 
-    string s1="Mango";
+    string s1="orange";
     string s2 = "Apple";
     
     cout<<s2.compare(s1)<<endl;
     
     cout<<s1[0]<<endl;
 
-    to find the index______________
+   // to find the index______________
 
     string s = "I want to have some chocolate and milk shake!!";
     string x;
