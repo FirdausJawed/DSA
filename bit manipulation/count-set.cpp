@@ -12,6 +12,7 @@ int countset(int n)
         }       
     }
     cout<<res<<"-->";
+    return res;
 }
 
 int main (){
