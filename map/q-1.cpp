@@ -1,4 +1,4 @@
-// given n no. of strings, print uniquesstrings in lexiographical order with frequency
+// given n no. of strings, print unique strings in lexiographical order with frequency
 
 #include<bits/stdc++.h>
 using namespace std;
