@@ -52,56 +52,23 @@ double eps = 1e-12;
 #define al(arr,n) arr,arr+n
 #define sz(x) ((ll)(x).size())
  
-vi ar[10001];
-int vis[10001];
-
-void dfs (int node){
-    vis[node]=1;
-    for (int child : ar[node])
-    {
-        if (vis[child] == 0)
-        {
-            dfs(child);
-        }
-        
-    }
-    
-}
 
 void solve()
 { 
- int n,m,a,b;
- cin>>n>>m;
-
- for (int i = 1; i <= m; i++)
- {
-    cin>>a>>b;
-    ar[a].pb(b),ar[b].pb(a);
- }
- 
- int cc = 0;
-
- for (int i = 1; i <= n; i++)
- {
-    if (vis[i]==0)
-    {
-     dfs(i),cc++;
-    }     
- }
- if (cc==1 && m==n-1)
- {
-    cout<<"YES"<<ln;
- }
- else{
-    cout<<"NO"<<ln;
- }
+//  int n;
+//  cin>>n;
+//  int arr[n];
+//  forn(i,n)
+//  {
+//  cin>>arr[i];
+//  }
  
 }
 int main()
 {
  fast_cin();
- ll t=1;
- //cin >> t;
+ ll t;
+ cin >> t;
  for(int it=1;it<=t;it++) {
  solve();
  }

@@ -51,52 +51,52 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define al(arr,n) arr,arr+n
 #define sz(x) ((ll)(x).size())
- 
-vi ar[10001];
-int vis[10001];
+#define maxi 1000000
+vector <int> arr[maxi];
+int vis [maxi];
+int c;
 
-void dfs (int node){
-    vis[node]=1;
-    for (int child : ar[node])
-    {
-        if (vis[child] == 0)
+void dfs(int v){
+    vis[v]=1;
+
+    for(auto child : arr[v]){
+        if (vis[child]==0)
         {
             dfs(child);
         }
         
     }
-    
 }
 
 void solve()
 { 
- int n,m,a,b;
- cin>>n>>m;
+    int n,m;
+    cin>>n>>m;
 
- for (int i = 1; i <= m; i++)
- {
-    cin>>a>>b;
-    ar[a].pb(b),ar[b].pb(a);
- }
- 
- int cc = 0;
-
- for (int i = 1; i <= n; i++)
- {
-    if (vis[i]==0)
-    {
-     dfs(i),cc++;
-    }     
- }
- if (cc==1 && m==n-1)
- {
-    cout<<"YES"<<ln;
- }
- else{
-    cout<<"NO"<<ln;
- }
- 
+    for(int i=1; i<=n; i++){
+        int a,b;
+        cin>>a>>b;
+        arr[a].pb(b),arr[b].pb(a);
+    }
+    
+    int cc=0;
+    vector<int>v;
+    for(int i=1; i<=n; i++){
+        if (vis[i]==0)
+        {
+            dfs(i);
+            v.pb(c);
+            c=0;
+            cc++;
+        }
+    }
+cout<<cc<<ln;
+    for(int i=1; i<=n; i++){
+        cout<<v[i]<<" ";
+    }
+    cout<<ln;
 }
+
 int main()
 {
  fast_cin();
