@@ -55,13 +55,6 @@ double eps = 1e-12;
 
 void solve()
 { 
-//  int n;
-//  cin>>n;
-//  int arr[n];
-//  forn(i,n)
-//  {
-//  cin>>arr[i];
-//  }
  
 }
 int main()
