@@ -51,14 +51,36 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
  
-
 void solve(){
+    int n,k;
+    cin>>n>>k;
+    int arr[n];
+    forn(i,n){
+        cin>>arr[i];
+    }
+
+    int ans = INT_MAX;
+    int sum = 0;
+
+    forn(i,0){
+        sum+=arr[i];
+    }
+
+    ans = min(ans,sum);
+    for (int i = 1; i < n-k+1; i++)
+    {
+       sum-=arr[i-1];
+       sum+=arr[i+k-1];
+       ans = min(ans,sum);
+    }
+    cout<<ans<<ln;
+    
 }
 int main()
 {
  fast_cin();
- ll t;
- cin >> t;
+ ll t=1;
+ //cin >> t;
  for(int it=1;it<=t;it++) {
  solve();
  }
