@@ -55,32 +55,50 @@ double eps = 1e-12;
 #define al(arr, n) arr, arr + n
 #define sz(x) ((ll)(x).size())
 
+
+void dfs(int node){
+    vis[v] = 1;
+    cout << v << "-->";
+
+    for(auto child:arr[v]){
+        if (arr[child]==0)
+        {
+            dfs(child);
+        }
+        
+    }
+}
+
+
+
 void solve()
 {
-    int n;
+    ll n;
     cin >> n;
-    int arr[n];
+    ll arr[n];
     forn(i, n)
     {
         cin >> arr[i];
     }
-
-    int val = 0;
-    for (auto t : arr)
-    {
-        val = val ^ t;
-    }
-
-    cout << val;
 }
 int main()
 {
     fast_cin();
-    ll t = 1;
-    //  cin >> t;
+    ll t;
+    cin >> t;
     for (int it = 1; it <= t; it++)
     {
         solve();
     }
     return 0;
 }
+
+/* 
+1. Check borderline constraints. Can a variable you are dividing by be 0?
+2. Use ll while using bitshifts
+3. Do not erase from set while iterating it
+4. Initialise everything
+5. Read the task carefully, is something unique, sorted, adjacent, guaranteed??
+6. DO NOT use if(!mp[x]) if you want to iterate the map later
+7. Are you using i in all loops? Are the i's conflicting?
+*/
