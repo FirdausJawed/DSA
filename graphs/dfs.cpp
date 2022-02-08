@@ -55,7 +55,8 @@ double eps = 1e-12;
 #define al(arr, n) arr, arr + n
 #define sz(x) ((ll)(x).size())
 
-
+int vis[10001];
+vector<int> arr[100001];
 void dfs(int node){
     vis[v] = 1;
     cout << v << "-->";
