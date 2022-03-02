@@ -76,6 +76,7 @@ void solve(){
     }
 
     int cc=0;
+   
     for (int i = 1; i <= n; i++)
     {
         if (!vis[i])

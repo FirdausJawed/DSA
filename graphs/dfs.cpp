@@ -57,31 +57,42 @@ double eps = 1e-12;
 
 int vis[10001];
 vector<int> arr[100001];
-void dfs(int node){
+
+void dfs(int node)
+{
     vis[v] = 1;
     cout << v << "-->";
 
-    for(auto child:arr[v]){
-        if (arr[child]==0)
+    for (auto child : arr[v])
+    {
+        if (arr[child] == 0)
         {
             dfs(child);
         }
-        
     }
 }
-
 
 
 void solve()
 {
-    ll n;
-    cin >> n;
-    ll arr[n];
-    forn(i, n)
+    ll n, m, a, b;
+    cin >> n >> m;
+    while (m--)
     {
-        cin >> arr[i];
+        cin >> a >> b;
+        arr[a].bp(b), arr[b].pb(a);
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        if (vis[i] != 1)
+        {
+            dfs(i);
+        }
     }
 }
+
+
 int main()
 {
     fast_cin();
@@ -94,7 +105,7 @@ int main()
     return 0;
 }
 
-/* 
+/*
 1. Check borderline constraints. Can a variable you are dividing by be 0?
 2. Use ll while using bitshifts
 3. Do not erase from set while iterating it
