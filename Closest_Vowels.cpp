@@ -175,38 +175,33 @@ bool pow2(ll x)
     return false;
 }
 
-ll min_diff(string x,string y){
-    ll ans = 0;
-    forn(i,x.size()){
-        ans += abs(x[i] - y[i]);
-    }
-    return ans;
-}
-
 void solve()
 {
-    vector<string> v;
-    ll m, n,answer=INF;
-    cin >> m >> n;
-    forn(i, m)
-    {
+    ll n;
+    cin >> n;
     string s;
-        cin >> s;
-        v.pb(s);
-    }
+    cin >> s;
+    ll a = 1;
 
-    forn(i, m-1)
+    forn(i, s.size())
     {
-        for (int j = i + 1; j < m;j++)
+        if (s[i] == 'c' || s[i] == 'g' || s[i] == 'l' || s[i] == 'r')
         {
-            answer = min(min_diff(v[i], v[j]), answer);
-            // cout << answer << " " << v[i] << " " << v[j] << ln;
+            a *= 2;
+            a %= MOD;
         }
     }
-    cout << answer << ln;
-    // cout << ln;
-}
 
+    a %= MOD;
+
+    if (a == 0)
+    {
+        cout << 1 << ln;
+        return;
+    }
+
+    cout << a << ln;
+}
 int main()
 {
     fast_cin();
