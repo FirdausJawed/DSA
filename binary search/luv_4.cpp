@@ -174,56 +174,60 @@ bool pow2(ll x)
     }
     return false;
 }
+const int M = 1e6+10;
+ll n, m;
+ll arr[M];
 
-// bool is_prime(ll n)
-// {
-//     if (n == 1)
-//     {
-//         return false;
-//     }
-//     for (ll i = 2; i <= sqrt(n); i++)
-//     {
-//         if (n % i == 0)
-//         {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
+bool issufficientwood(ll h)
+{
+   ll wood = 0;
+    forn(i, n)
+    {
+        if (arr[i] >= h)
+        {
+            wood += (arr[i] - h);
+        }
+    }
+    return wood >= m;
+}
 
 void solve()
 {
-    double x;
-    cin >> x;
-    double lo = 1, hi = x, mid;
+    cin >> n >> m;
+    forn(i, n)
+    {
+        cin >> arr[i];
+    }
 
-    while (hi - lo > eps)
+    ll lo = 0, hi = 1e9, mid;
+
+    while (hi - lo > 1)
     {
         mid = (hi + lo) / 2;
-        if (mid * mid < x)
+        if (issufficientwood(mid))
         {
             lo = mid;
         }
         else
         {
-            hi = mid;
+            hi = mid - 1;
         }
     }
-    // ll t = lo;
-    cout << lo << ln;
-    // if (is_prime(t)&&t*t==x)
-    // {
-    //     cout << "YES" << ln;
-    // }
-    // else{
-    //     cout << "NO" << ln;
-    // }
+
+    if (issufficientwood(hi))
+    {
+        cout << hi << ln;
+    }
+    else
+    {
+        cout << lo << ln;
+    }
 }
 int main()
 {
     fast_cin();
-    ll t;
-    cin >> t;
+    ll t=1;
+    // cin >> t;
     for (int it = 1; it <= t; it++)
     {
         solve();

@@ -175,49 +175,16 @@ bool pow2(ll x)
     return false;
 }
 
-// bool is_prime(ll n)
-// {
-//     if (n == 1)
-//     {
-//         return false;
-//     }
-//     for (ll i = 2; i <= sqrt(n); i++)
-//     {
-//         if (n % i == 0)
-//         {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-
 void solve()
 {
-    double x;
-    cin >> x;
-    double lo = 1, hi = x, mid;
-
-    while (hi - lo > eps)
-    {
-        mid = (hi + lo) / 2;
-        if (mid * mid < x)
-        {
-            lo = mid;
-        }
-        else
-        {
-            hi = mid;
-        }
+    ll m, n;
+    cin >> m >> n;
+    while(m--){
+        string s;
+        cin>>s;
     }
-    // ll t = lo;
-    cout << lo << ln;
-    // if (is_prime(t)&&t*t==x)
-    // {
-    //     cout << "YES" << ln;
-    // }
-    // else{
-    //     cout << "NO" << ln;
-    // }
+    
+
 }
 int main()
 {

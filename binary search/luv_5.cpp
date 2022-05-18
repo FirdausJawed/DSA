@@ -175,49 +175,59 @@ bool pow2(ll x)
     return false;
 }
 
-// bool is_prime(ll n)
-// {
-//     if (n == 1)
-//     {
-//         return false;
-//     }
-//     for (ll i = 2; i <= sqrt(n); i++)
-//     {
-//         if (n % i == 0)
-//         {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
+const int M = 1e6;
+ll arr[M];
+ll n, cows;
+
+bool canplacecow(ll min_dist)
+{
+    ll cnt_cow = cows, lastpos = -1;
+    forn(i, n)
+    {
+        if (lastpos == -1 || arr[i] - lastpos >= min_dist)
+        {
+            cnt_cow--, lastpos = arr[i];
+        }
+        if (cnt_cow == 0)
+        {
+            break;
+        }
+    }
+    return cnt_cow == 0;
+}
 
 void solve()
 {
-    double x;
-    cin >> x;
-    double lo = 1, hi = x, mid;
+    cin >> n >> cows;
+    forn(i, n)
+    {
+        cin >> arr[i];
+    }
 
-    while (hi - lo > eps)
+    sort(al(arr, n));
+
+    ll lo = 0, hi = 1e9, mid;
+    while (hi - lo > 1)
     {
         mid = (hi + lo) / 2;
-        if (mid * mid < x)
+        if (canplacecow(mid))
         {
             lo = mid;
         }
         else
         {
-            hi = mid;
+            hi = mid - 1;
         }
     }
-    // ll t = lo;
-    cout << lo << ln;
-    // if (is_prime(t)&&t*t==x)
-    // {
-    //     cout << "YES" << ln;
-    // }
-    // else{
-    //     cout << "NO" << ln;
-    // }
+
+    if (canplacecow(hi))
+    {
+        cout << hi << ln;
+    }
+    else
+    {
+        cout << lo << ln;
+    }
 }
 int main()
 {
